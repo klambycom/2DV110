@@ -19,5 +19,6 @@ class TestSticks < Test::Unit::TestCase
   def test_draw_1
     sticks = Sticks.new 15
     sticks.draw_1
+    assert_equal sticks.nr_of_sticks, 14
   end
 end
