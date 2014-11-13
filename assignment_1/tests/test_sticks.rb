@@ -60,6 +60,18 @@ class TestSticks < Test::Unit::TestCase
     end
   end
 
+  def test_draw_1?
+    @sticks.draw_1?
+  end
+
+  def test_draw_2?
+    @sticks.draw_2?
+  end
+
+  def test_draw_3?
+    @sticks.draw_3?
+  end
+
   private
 
   def assert_sticks n, message = nil
