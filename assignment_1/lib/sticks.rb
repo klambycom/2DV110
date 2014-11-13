@@ -10,4 +10,7 @@ class Sticks
     (0...nr_of_sticks).each { str << 'I' }
     str
   end
+
+  def draw_1
+  end
 end
