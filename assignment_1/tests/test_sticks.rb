@@ -32,4 +32,8 @@ class TestSticks < Test::Unit::TestCase
     @sticks.draw_3
     assert_equal @sticks.nr_of_sticks, 12
   end
+
+  def test_game_over?
+    @sticks.game_over?
+  end
 end
