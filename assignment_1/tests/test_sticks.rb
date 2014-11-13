@@ -10,27 +10,23 @@ class TestSticks < Test::Unit::TestCase
     Sticks.new 15
   end
 
-  def test_nr_of_sticks
-    assert_equal 15, @sticks.nr_of_sticks
-  end
-
   def test_to_s
     assert_equal 'IIIIIIIIIIIIIII', @sticks.to_s
   end
 
   def test_draw_1
     @sticks.draw_1
-    assert_equal 14, @sticks.nr_of_sticks
+    assert_sticks 14
   end
 
   def test_draw_2
     @sticks.draw_2
-    assert_equal 13, @sticks.nr_of_sticks
+    assert_sticks 13
   end
 
   def test_draw_3
     @sticks.draw_3
-    assert_equal 12, @sticks.nr_of_sticks
+    assert_sticks 12
   end
 
   def test_game_over?
@@ -45,5 +41,11 @@ class TestSticks < Test::Unit::TestCase
     @sticks.draw_3
     @sticks.draw_2
     assert_equal true, @sticks.game_over?
+  end
+
+  private
+
+  def assert_sticks n, message = nil
+    assert_equal n, @sticks.to_s.length, message
   end
 end
