@@ -8,7 +8,7 @@ class MetaSticks
         @nr_of_sticks -= i
       end
 
-      define_method("draw_#{i}?") { true }
+      define_method("draw_#{i}?") { @nr_of_sticks >= i }
     end
   end
 end
