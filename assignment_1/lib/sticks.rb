@@ -24,6 +24,6 @@ class Sticks
   end
 
   def game_over?
-    false
+    @nr_of_sticks <= 1
   end
 end
