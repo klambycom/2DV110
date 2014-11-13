@@ -15,4 +15,9 @@ class TestSticks < Test::Unit::TestCase
     sticks = Sticks.new 15
     assert_equal sticks.to_s, 'IIIIIIIIIIIIIII'
   end
+
+  def test_draw_1
+    sticks = Sticks.new 15
+    sticks.draw_1
+  end
 end
