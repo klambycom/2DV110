@@ -27,4 +27,8 @@ class TestSticks < Test::Unit::TestCase
     @sticks.draw_2
     assert_equal @sticks.nr_of_sticks, 13
   end
+
+  def test_draw_3
+    @sticks.draw_3
+  end
 end
