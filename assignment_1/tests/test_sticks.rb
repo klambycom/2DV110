@@ -43,6 +43,20 @@ class TestSticks < Test::Unit::TestCase
     assert_equal true, @sticks.game_over?
   end
 
+  def test_draw_to_many_1
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_3
+
+    @sticks.draw_1
+    @sticks.draw_2
+
+    assert_raise RuntimeError do
+      @sticks.draw_1
+    end
+  end
+
   private
 
   def assert_sticks n, message = nil
