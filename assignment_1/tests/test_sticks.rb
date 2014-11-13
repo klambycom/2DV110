@@ -35,5 +35,6 @@ class TestSticks < Test::Unit::TestCase
 
   def test_game_over?
     @sticks.game_over?
+    assert_equal false, @sticks.game_over?
   end
 end
