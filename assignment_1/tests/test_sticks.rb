@@ -35,49 +35,26 @@ class TestSticks < Test::Unit::TestCase
   end
 
   def test_game_over_when_only_one_stick_or_less
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_2
+    draw 14
     assert_equal true, @sticks.game_over?
   end
 
   def test_draw_to_many_1
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-
-    @sticks.draw_1
-    @sticks.draw_2
-
+    draw 15
     assert_raise RuntimeError do
       @sticks.draw_1
     end
   end
 
   def test_draw_to_many_2
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-
-    @sticks.draw_2
-
+    draw 14
     assert_raise RuntimeError do
       @sticks.draw_2
     end
   end
 
   def test_draw_to_many_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-
-    @sticks.draw_1
-
+    draw 13
     assert_raise RuntimeError do
       @sticks.draw_3
     end
@@ -87,5 +64,9 @@ class TestSticks < Test::Unit::TestCase
 
   def assert_sticks n, message = nil
     assert_equal n, @sticks.to_s.length, message
+  end
+
+  def draw n
+    (0...n).each { @sticks.draw_1 }
   end
 end
