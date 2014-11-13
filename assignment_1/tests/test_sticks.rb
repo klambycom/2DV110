@@ -3,11 +3,7 @@ require 'test/unit'
 
 class TestSticks < Test::Unit::TestCase
   def setup
-    @sticks = Sticks.new 15
-  end
-
-  def test_constructor
-    Sticks.new 15
+    @sticks = Sticks.new
   end
 
   def test_to_s
