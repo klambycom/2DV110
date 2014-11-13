@@ -70,6 +70,19 @@ class TestSticks < Test::Unit::TestCase
     end
   end
 
+  def test_draw_to_many_3
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_3
+
+    @sticks.draw_1
+
+    assert_raise RuntimeError do
+      @sticks.draw_3
+    end
+  end
+
   private
 
   def assert_sticks n, message = nil
