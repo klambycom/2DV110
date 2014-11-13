@@ -5,10 +5,11 @@ class Sticks < MetaSticks
 
   def initialize
     @nr_of_sticks = 15
+    @drawn_sticks = 0
   end
 
   def to_s
-    (0...@nr_of_sticks).inject('') { |str| str << 'I' }
+    ('I' * @nr_of_sticks) + ('_' * @drawn_sticks)
   end
 
   def game_over?
