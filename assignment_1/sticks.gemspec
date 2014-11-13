@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage       = ''
   spec.license        = 'MIT'
 
+  spec.add_development_dependency 'simplecov'
+
   spec.files          = ['lib/sticks.rb']
   spec.executables    = ['bin/sticks']
   spec.test_files     = ['tests/test_sticks.rb']
