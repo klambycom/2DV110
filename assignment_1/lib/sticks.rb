@@ -24,5 +24,6 @@ class Sticks
   end
 
   def game_over?
+    false
   end
 end
