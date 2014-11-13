@@ -7,7 +7,7 @@ class Sticks
 
   def to_s
     str = ''
-    (0...nr_of_sticks).each { str += 'I' }
+    (0...nr_of_sticks).each { str << 'I' }
     str
   end
 end
