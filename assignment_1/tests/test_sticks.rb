@@ -72,6 +72,21 @@ class TestSticks < Test::Unit::TestCase
     assert_equal true, @sticks.draw_3?
   end
 
+  def test_false_draw_1?
+    draw 15
+    assert_equal false, @sticks.draw_1?
+  end
+
+  def test_false_draw_2?
+    draw 14
+    assert_equal false, @sticks.draw_2?
+  end
+
+  def test_false_draw_3?
+    draw 13
+    assert_equal false, @sticks.draw_3?
+  end
+
   private
 
   def assert_sticks n, message = nil
