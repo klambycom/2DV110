@@ -15,6 +15,7 @@ class Sticks
   end
 
   def draw_2
+    raise 'No sticks left' if @nr_of_sticks <= 1
     @nr_of_sticks -= 2
   end
 
