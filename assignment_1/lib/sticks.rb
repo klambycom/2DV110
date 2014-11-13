@@ -22,4 +22,7 @@ class Sticks
   def draw_3
     @nr_of_sticks -= 3
   end
+
+  def game_over?
+  end
 end
