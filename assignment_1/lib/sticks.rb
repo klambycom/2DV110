@@ -16,5 +16,6 @@ class Sticks
   end
 
   def draw_2
+    @nr_of_sticks -= 2
   end
 end
