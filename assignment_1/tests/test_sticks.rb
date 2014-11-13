@@ -31,7 +31,7 @@ class TestSticks < Test::Unit::TestCase
   end
 
   def test_game_over_when_only_one_stick_or_less
-    draw 14
+    draw 15
     assert_equal true, @sticks.game_over?
   end
 
@@ -81,6 +81,13 @@ class TestSticks < Test::Unit::TestCase
   def test_false_draw_3?
     draw 13
     assert_equal false, @sticks.draw_3?
+  end
+
+  def test_draw_to_game_over
+    draw 14
+    assert_equal false, @sticks.game_over?
+    @sticks.draw_1
+    assert_equal true, @sticks.game_over?
   end
 
   private
