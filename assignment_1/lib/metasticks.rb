@@ -4,7 +4,7 @@ class MetaSticks
   def self.def_draw_for ns
     ns.each do |i|
       define_method("draw_#{i}") do
-        raise 'No sticks left' if @nr_of_sticks <= (i - 1)
+        raise 'No sticks left' if @nr_of_sticks < i
         @nr_of_sticks -= i
       end
 

@@ -12,6 +12,6 @@ class Sticks < MetaSticks
   end
 
   def game_over?
-    @nr_of_sticks <= 1
+    @nr_of_sticks == 0
   end
 end
