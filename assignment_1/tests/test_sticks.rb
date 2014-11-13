@@ -10,6 +10,11 @@ class TestSticks < Test::Unit::TestCase
     assert_equal 'IIIIIIIIIIIIIII', @sticks.to_s
   end
 
+  def test_to_s_when_drawn_sticks
+    @sticks.draw_3
+    assert_equal 'IIIIIIIIIIII___', @sticks.to_s
+  end
+
   def test_draw_1
     @sticks.draw_1
     assert_sticks 14
@@ -93,7 +98,7 @@ class TestSticks < Test::Unit::TestCase
   private
 
   def assert_sticks n, message = nil
-    assert_equal n, @sticks.to_s.length, message
+    assert_equal n, @sticks.to_s.count('I'), message
   end
 
   def draw n
