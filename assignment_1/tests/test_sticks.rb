@@ -37,4 +37,13 @@ class TestSticks < Test::Unit::TestCase
     @sticks.game_over?
     assert_equal false, @sticks.game_over?
   end
+
+  def test_game_over_when_only_one_stick_or_less
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_2
+    assert_equal true, @sticks.game_over?
+  end
 end
