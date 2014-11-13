@@ -8,9 +8,7 @@ class Sticks < MetaSticks
   end
 
   def to_s
-    str = ''
-    (0...@nr_of_sticks).each { str << 'I' }
-    str
+    (0...@nr_of_sticks).inject('') { |str| str << 'I' }
   end
 
   def game_over?
