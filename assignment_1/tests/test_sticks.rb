@@ -11,26 +11,26 @@ class TestSticks < Test::Unit::TestCase
   end
 
   def test_nr_of_sticks
-    assert_equal @sticks.nr_of_sticks, 15
+    assert_equal 15, @sticks.nr_of_sticks
   end
 
   def test_to_s
-    assert_equal @sticks.to_s, 'IIIIIIIIIIIIIII'
+    assert_equal 'IIIIIIIIIIIIIII', @sticks.to_s
   end
 
   def test_draw_1
     @sticks.draw_1
-    assert_equal @sticks.nr_of_sticks, 14
+    assert_equal 14, @sticks.nr_of_sticks
   end
 
   def test_draw_2
     @sticks.draw_2
-    assert_equal @sticks.nr_of_sticks, 13
+    assert_equal 13, @sticks.nr_of_sticks
   end
 
   def test_draw_3
     @sticks.draw_3
-    assert_equal @sticks.nr_of_sticks, 12
+    assert_equal 12, @sticks.nr_of_sticks
   end
 
   def test_game_over?
