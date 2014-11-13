@@ -1,4 +1,8 @@
-class Sticks
+require './lib/metasticks.rb'
+
+class Sticks < MetaSticks
+  def_draw_for [1, 2, 3]
+
   def initialize nr_of_sticks
     @nr_of_sticks = nr_of_sticks
   end
@@ -7,21 +11,6 @@ class Sticks
     str = ''
     (0...@nr_of_sticks).each { str << 'I' }
     str
-  end
-
-  def draw_1
-    raise 'No sticks left' if @nr_of_sticks <= 0
-    @nr_of_sticks -= 1
-  end
-
-  def draw_2
-    raise 'No sticks left' if @nr_of_sticks <= 1
-    @nr_of_sticks -= 2
-  end
-
-  def draw_3
-    raise 'No sticks left' if @nr_of_sticks <= 2
-    @nr_of_sticks -= 3
   end
 
   def game_over?
