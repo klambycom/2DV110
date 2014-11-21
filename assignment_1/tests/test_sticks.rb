@@ -92,7 +92,7 @@ class TestSticks < Test::Unit::TestCase
   def test_draw_to_game_over
     draw 14
     assert_equal false, @sticks.game_over?
-    @sticks.draw_1
+    draw 1
     assert_equal true, @sticks.game_over?
   end
 
