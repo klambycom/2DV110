@@ -13,6 +13,8 @@ class Sticks < MetaSticks
     case nr_of_sticks
     when 15
       draw_2
+    when 14
+      draw_1
     end
   end
 
