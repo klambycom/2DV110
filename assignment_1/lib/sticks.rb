@@ -33,6 +33,8 @@ class Sticks < MetaSticks
       draw_1
     when 5
       draw_1
+    when 4
+      draw_3
     end
   end
 
