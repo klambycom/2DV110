@@ -15,6 +15,8 @@ class Sticks < MetaSticks
       draw_2
     when 14
       draw_1
+    when 13
+      draw_1
     end
   end
 
