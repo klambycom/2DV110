@@ -25,6 +25,8 @@ class Sticks < MetaSticks
       draw_1
     when 9
       draw_1
+    when 8
+      draw_3
     end
   end
 
