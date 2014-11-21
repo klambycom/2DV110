@@ -100,8 +100,9 @@ class TestSticks < Test::Unit::TestCase
     @sticks.nr_of_sticks
   end
 
-  def test_computer
+  def test_computer_15
     @sticks.computer
+    assert_equal 13, @sticks.nr_of_sticks
   end
 
   private
