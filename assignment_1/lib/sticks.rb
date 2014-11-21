@@ -9,6 +9,9 @@ class Sticks < MetaSticks
     @nr_of_sticks = 15
   end
 
+  def computer
+  end
+
   def to_s
     ('I' * nr_of_sticks) + ('_' * (15 - nr_of_sticks))
   end
