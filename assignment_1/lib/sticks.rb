@@ -1,6 +1,8 @@
 require './lib/metasticks.rb'
 
 class Sticks < MetaSticks
+  attr_reader :nr_of_sticks
+
   def_draw_for [1, 2, 3]
 
   def initialize
