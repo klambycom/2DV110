@@ -168,6 +168,15 @@ class TestSticks < Test::Unit::TestCase
     assert_equal 5, @sticks.nr_of_sticks
   end
 
+  def test_computer_5
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_3
+    @sticks.draw_1
+    @sticks.computer
+    assert_equal 4, @sticks.nr_of_sticks
+  end
+
   private
 
   def assert_sticks n, message = nil
