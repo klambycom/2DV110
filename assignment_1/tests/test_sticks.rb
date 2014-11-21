@@ -1,5 +1,6 @@
 require './lib/sticks.rb'
 require 'test/unit'
+require 'mocha/test_unit'
 
 class TestSticks < Test::Unit::TestCase
   def setup
@@ -106,6 +107,7 @@ class TestSticks < Test::Unit::TestCase
   end
 
   def draw n
-    (0...n).each { @sticks.draw_1 }
+    nr_of_sticks = @sticks.nr_of_sticks - n
+    @sticks.stubs(:nr_of_sticks).returns(nr_of_sticks)
   end
 end

@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.license        = 'MIT'
 
   spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'mocha'
 
   spec.files          = ['lib/sticks.rb']
   spec.executables    = ['bin/sticks']

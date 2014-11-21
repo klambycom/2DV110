@@ -7,6 +7,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     docile (1.1.5)
+    metaclass (0.0.4)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     multi_json (1.10.1)
     simplecov (0.9.1)
       docile (~> 1.1.0)
@@ -19,4 +22,5 @@ PLATFORMS
 
 DEPENDENCIES
   Sticks!
+  mocha
   simplecov
