@@ -100,6 +100,10 @@ class TestSticks < Test::Unit::TestCase
     @sticks.nr_of_sticks
   end
 
+  def test_computer
+    @sticks.computer
+  end
+
   private
 
   def assert_sticks n, message = nil
