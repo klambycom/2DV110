@@ -95,6 +95,10 @@ class TestSticks < Test::Unit::TestCase
     assert_equal true, @sticks.game_over?
   end
 
+  def test_getter_for_nr_of_sticks
+    @sticks.nr_of_sticks
+  end
+
   private
 
   def assert_sticks n, message = nil
