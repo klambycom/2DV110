@@ -10,6 +10,10 @@ class Sticks < MetaSticks
   end
 
   def computer
+    case nr_of_sticks
+    when 15
+      draw_2
+    end
   end
 
   def to_s
