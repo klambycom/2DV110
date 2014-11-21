@@ -105,6 +105,12 @@ class TestSticks < Test::Unit::TestCase
     assert_equal 13, @sticks.nr_of_sticks
   end
 
+  def test_computer_14
+    @sticks.draw_1
+    @sticks.computer
+    assert_equal 13, @sticks.nr_of_sticks
+  end
+
   private
 
   def assert_sticks n, message = nil
