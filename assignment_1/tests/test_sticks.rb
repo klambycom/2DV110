@@ -101,118 +101,63 @@ class TestSticks < Test::Unit::TestCase
   end
 
   def test_computer_15
-    @sticks.computer
-    assert_equal 13, @sticks.nr_of_sticks
+    assert_computer start: 15, expected: 13
   end
 
   def test_computer_14
-    @sticks.draw_1
-    @sticks.computer
-    assert_equal 13, @sticks.nr_of_sticks
+    assert_computer start: 14, expected: 13
   end
 
   def test_computer_13
-    @sticks.draw_2
-    @sticks.computer
-    assert_equal 12, @sticks.nr_of_sticks
+    assert_computer start: 13, expected: 12
   end
 
   def test_computer_12
-    @sticks.draw_3
-    @sticks.computer
-    assert_equal 9, @sticks.nr_of_sticks
+    assert_computer start: 12, expected: 9
   end
 
   def test_computer_11
-    @sticks.draw_3
-    @sticks.draw_1
-    @sticks.computer
-    assert_equal 9, @sticks.nr_of_sticks
+    assert_computer start: 11, expected: 9
   end
 
   def test_computer_10
-    @sticks.draw_3
-    @sticks.draw_2
-    @sticks.computer
-    assert_equal 9, @sticks.nr_of_sticks
+    assert_computer start: 10, expected: 9
   end
 
   def test_computer_9
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.computer
-    assert_equal 8, @sticks.nr_of_sticks
+    assert_computer start: 9, expected: 8
   end
 
   def test_computer_8
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_1
-    @sticks.computer
-    assert_equal 5, @sticks.nr_of_sticks
+    assert_computer start: 8, expected: 5
   end
 
   def test_computer_7
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_2
-    @sticks.computer
-    assert_equal 5, @sticks.nr_of_sticks
+    assert_computer start: 7, expected: 5
   end
 
   def test_computer_6
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.computer
-    assert_equal 5, @sticks.nr_of_sticks
+    assert_computer start: 6, expected: 5
   end
 
   def test_computer_5
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_1
-    @sticks.computer
-    assert_equal 4, @sticks.nr_of_sticks
+    assert_computer start: 5, expected: 4
   end
 
   def test_computer_4
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_2
-    @sticks.computer
-    assert_equal 1, @sticks.nr_of_sticks
+    assert_computer start: 4, expected: 1
   end
 
   def test_computer_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.computer
-    assert_equal 1, @sticks.nr_of_sticks
+    assert_computer start: 3, expected: 1
   end
 
   def test_computer_2
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_1
-    @sticks.computer
-    assert_equal 1, @sticks.nr_of_sticks
+    assert_computer start: 2, expected: 1
   end
 
   def test_computer_1
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_3
-    @sticks.draw_2
-    @sticks.computer
-    assert_equal 0, @sticks.nr_of_sticks
+    assert_computer start: 1, expected: 0
   end
 
   private
@@ -224,5 +169,11 @@ class TestSticks < Test::Unit::TestCase
   def draw n
     nr_of_sticks = @sticks.nr_of_sticks - n
     @sticks.stubs(:nr_of_sticks).returns(nr_of_sticks)
+  end
+
+  def assert_computer hash = {}
+    (0...(15 - hash[:start])).each { @sticks.draw_1 }
+    @sticks.computer
+    assert_equal hash[:expected], @sticks.nr_of_sticks, hash[:message]
   end
 end
