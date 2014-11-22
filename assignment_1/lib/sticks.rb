@@ -7,6 +7,7 @@ class Sticks < MetaSticks
 
   def initialize
     @nr_of_sticks = 15
+    @last_draw = 0
   end
 
   def computer
@@ -25,7 +26,7 @@ class Sticks < MetaSticks
   end
 
   def to_s
-    ('I' * nr_of_sticks) + ('_' * (15 - nr_of_sticks))
+    ('I' * nr_of_sticks) + ('.' * @last_draw) + ('_' * ((15 - nr_of_sticks) - @last_draw))
   end
 
   def game_over?

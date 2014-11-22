@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-22T01:56:52+01:00">2014-11-22T01:56:52+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-22T02:00:01+01:00">2014-11-22T02:00:01+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         12.74
+         17.2
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>25</b> relevant lines. 
-    <span class="green"><b>25</b> lines covered</span> and
+    <b>27</b> relevant lines. 
+    <span class="green"><b>27</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,21 +53,21 @@
       <tr>
         <td class="strong"><a href="#0b9c9587e6a5330525304cd0a3d6e2b6a8db748f" class="src_link" title="lib/metasticks.rb">lib/metasticks.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>14</td>
-        <td>8</td>
-        <td>8</td>
+        <td>15</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
-        <td>29.6</td>
+        <td>38.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#582456cd4d1d8c2758af970b792095d5c42d8993" class="src_link" title="lib/sticks.rb">lib/sticks.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>34</td>
-        <td>17</td>
-        <td>17</td>
+        <td>35</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
-        <td>4.8</td>
+        <td>6.4</td>
       </tr>
       
     </tbody>
@@ -91,8 +91,8 @@
     <h3>lib/metasticks.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -136,49 +136,55 @@
           <code class="ruby">      define_method(&quot;draw_#{i}&quot;) do</code>
         </li>
       
-        <li class="covered" data-hits="112" data-linenumber="7">
-          <span class="hits">112</span>
+        <li class="covered" data-hits="113" data-linenumber="7">
+          <span class="hits">113</span>
           
           <code class="ruby">        raise &#39;No sticks left&#39; if nr_of_sticks &lt; i</code>
         </li>
       
-        <li class="covered" data-hits="109" data-linenumber="8">
-          <span class="hits">109</span>
+        <li class="covered" data-hits="110" data-linenumber="8">
+          <span class="hits">110</span>
           
           <code class="ruby">        @nr_of_sticks -= i</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="110" data-linenumber="9">
+          <span class="hits">110</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        @last_draw = i</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="11">
+        <li class="covered" data-hits="9" data-linenumber="12">
           <span class="hits">9</span>
           
           <code class="ruby">      define_method(&quot;draw_#{i}?&quot;) { nr_of_sticks &gt;= i }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
@@ -193,8 +199,8 @@
     <h3>lib/sticks.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -256,151 +262,157 @@
           <code class="ruby">    @nr_of_sticks = 15</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="33" data-linenumber="10">
+          <span class="hits">33</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @last_draw = 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  def computer</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="13">
+        <li class="covered" data-hits="15" data-linenumber="14">
           <span class="hits">15</span>
           
           <code class="ruby">    case nr_of_sticks</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    when 14..15</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
+        <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
           <code class="ruby">      @nr_of_sticks = 13</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">    when 10..12</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="17">
+        <li class="covered" data-hits="3" data-linenumber="18">
           <span class="hits">3</span>
           
           <code class="ruby">      @nr_of_sticks = 9</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">    when 6..8</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="19">
+        <li class="covered" data-hits="3" data-linenumber="20">
           <span class="hits">3</span>
           
           <code class="ruby">      @nr_of_sticks = 5</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    when 2..4</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="21">
+        <li class="covered" data-hits="3" data-linenumber="22">
           <span class="hits">3</span>
           
           <code class="ruby">      @nr_of_sticks = 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="23">
+        <li class="covered" data-hits="4" data-linenumber="24">
           <span class="hits">4</span>
           
           <code class="ruby">      @nr_of_sticks -= 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">  def to_s</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="28">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="29">
+          <span class="hits">6</span>
           
-          <code class="ruby">    (&#39;I&#39; * nr_of_sticks) + (&#39;_&#39; * (15 - nr_of_sticks))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    (&#39;I&#39; * nr_of_sticks) + (&#39;.&#39; * @last_draw) + (&#39;_&#39; * ((15 - nr_of_sticks) - @last_draw))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">  def game_over?</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="32">
+        <li class="covered" data-hits="5" data-linenumber="33">
           <span class="hits">5</span>
           
           <code class="ruby">    nr_of_sticks == 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>
