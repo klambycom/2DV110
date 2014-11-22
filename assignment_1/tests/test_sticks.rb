@@ -13,7 +13,9 @@ class TestSticks < Test::Unit::TestCase
 
   def test_to_s_when_drawn_sticks
     @sticks.draw_3
-    assert_equal 'IIIIIIIIIIII___', @sticks.to_s
+    assert_equal 'IIIIIIIIIIII...', @sticks.to_s
+    @sticks.draw_2
+    assert_equal 'IIIIIIIIII..___', @sticks.to_s
   end
 
   def test_draw_1
