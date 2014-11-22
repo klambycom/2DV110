@@ -11,36 +11,16 @@ class Sticks < MetaSticks
 
   def computer
     case nr_of_sticks
-    when 15
-      draw_2
-    when 14
-      draw_1
-    when 13
-      draw_1
-    when 12
-      draw_3
-    when 11
-      draw_2
-    when 10
-      draw_1
-    when 9
-      draw_1
-    when 8
-      draw_3
-    when 7
-      draw_2
-    when 6
-      draw_1
-    when 5
-      draw_1
-    when 4
-      draw_3
-    when 3
-      draw_2
-    when 2
-      draw_1
-    when 1
-      draw_1
+    when 14..15
+      @nr_of_sticks = 13
+    when 10..12
+      @nr_of_sticks = 9
+    when 6..8
+      @nr_of_sticks = 5
+    when 2..4
+      @nr_of_sticks = 1
+    else
+      @nr_of_sticks -= 1
     end
   end
 
