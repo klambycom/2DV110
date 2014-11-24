@@ -26,8 +26,8 @@ class Game
   end
 
   def to_s
-    return %{There is 15 sticks left
-IIIIIIIIIIIIIII
+    return %{There is #{@sticks.nr_of_sticks} sticks left
+#{@sticks.to_s}
 
 Select number of sticks (the player who draws the last stick looses)
 
