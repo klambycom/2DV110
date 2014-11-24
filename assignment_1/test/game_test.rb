@@ -1,5 +1,6 @@
 require 'test_helper'
 require './lib/game.rb'
+require './lib/sticks.rb'
 
 class TestGame < MiniTest::Test
   def setup
@@ -58,5 +59,21 @@ class TestGame < MiniTest::Test
     sticks.expects(:game_over?).returns(false).at_least_once
     game = Game.new sticks
     assert_equal :none, game.draw(1)
+  end
+
+  def test_to_s
+    game = Game.new(Sticks.new)
+
+    text = %{There is 15 sticks left
+IIIIIIIIIIIIIII
+
+Select number of sticks (the player who draws the last stick looses)
+
+1. Draw 1 stick
+2. Draw 2 sticks
+3. Draw 3 sticks
+}
+
+    assert_equal text, game.to_s
   end
 end
