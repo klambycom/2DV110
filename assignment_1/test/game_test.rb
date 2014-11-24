@@ -1,13 +1,14 @@
 require 'test_helper'
 require './lib/game.rb'
-require './lib/sticks.rb'
 
 class TestGame < MiniTest::Test
   def setup
-    @game = Game.new(Sticks.new)
+    @sticks = mock()
+    @game = Game.new @sticks
   end
 
   def test_draw_1
+    @sticks.expects(:draw_1).once
     @game.draw_1
   end
 end
