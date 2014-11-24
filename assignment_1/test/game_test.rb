@@ -12,4 +12,10 @@ class TestGame < MiniTest::Test
     @sticks.expects(:computer).once
     @game.draw 1
   end
+
+  def test_draw_1
+    @sticks.expects(:draw_2).once
+    @sticks.expects(:computer).once
+    @game.draw 2
+  end
 end
