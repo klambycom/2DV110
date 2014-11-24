@@ -10,6 +10,6 @@ class TestGame < MiniTest::Test
   def test_draw_1
     @sticks.expects(:draw_1).once
     @sticks.expects(:computer).once
-    @game.draw_1
+    @game.draw 1
   end
 end
