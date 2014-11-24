@@ -24,4 +24,10 @@ class TestGame < MiniTest::Test
     @sticks.expects(:computer).once
     @game.draw 3
   end
+
+  def test_draw_invalid_argument
+    assert_raises RuntimeError do
+      @game.draw :not_a_number
+    end
+  end
 end
