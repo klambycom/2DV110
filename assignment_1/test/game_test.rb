@@ -71,8 +71,7 @@ Select number of sticks (the player who draws the last stick looses)
 
 1. Draw 1 stick
 2. Draw 2 sticks
-3. Draw 3 sticks
-}
+3. Draw 3 sticks}
 
     assert_equal text, game.to_s
   end
@@ -91,8 +90,7 @@ Select number of sticks (the player who draws the last stick looses)
 
 1. Draw 1 stick
 2. Draw 2 sticks
-3. Draw 3 sticks
-}
+3. Draw 3 sticks}
 
     assert_equal text, game.to_s
   end
