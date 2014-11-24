@@ -20,5 +20,8 @@ class Game
 
     # Player is winner if computer had last draw
     return :player if @sticks.game_over?
+
+    # No winner yet
+    return :none
   end
 end
