@@ -50,4 +50,13 @@ class TestGame < MiniTest::Test
     game = Game.new sticks
     assert_equal :player, game.draw(1)
   end
+
+  def test_draw_no_winner_yet
+    sticks = mock()
+    sticks.expects(:draw_1).once
+    sticks.expects(:computer).once
+    sticks.expects(:game_over?).returns(false).at_least_once
+    game = Game.new sticks
+    assert_equal :none, game.draw(1)
+  end
 end
