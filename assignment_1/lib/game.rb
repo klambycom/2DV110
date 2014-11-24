@@ -24,4 +24,16 @@ class Game
     # No winner yet
     return :none
   end
+
+  def to_s
+    return %{There is 15 sticks left
+IIIIIIIIIIIIIII
+
+Select number of sticks (the player who draws the last stick looses)
+
+1. Draw 1 stick
+2. Draw 2 sticks
+3. Draw 3 sticks
+}
+  end
 end
