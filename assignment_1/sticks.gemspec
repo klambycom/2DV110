@@ -16,8 +16,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'mocha'
 
-  spec.files          = ['lib/sticks.rb']
+  spec.files          = Dir['lib/*.rb']
   spec.executables    = ['bin/sticks']
-  spec.test_files     = ['tests/test_sticks.rb']
+  spec.test_files     = Dir.glob('tests/*.rb')
   spec.require_paths  = ['lib']
 end
