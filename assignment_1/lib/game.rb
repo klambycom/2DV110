@@ -4,5 +4,6 @@ class Game
   end
 
   def draw_1
+    @sticks.draw_1
   end
 end
