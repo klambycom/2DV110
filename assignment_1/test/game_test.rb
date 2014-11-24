@@ -10,21 +10,21 @@ class TestGame < MiniTest::Test
   def test_draw_1
     @sticks.expects(:draw_1).once
     @sticks.expects(:computer).once
-    @sticks.expects(:game_over?).returns(false)
+    @sticks.expects(:game_over?).returns(false).at_least_once
     @game.draw 1
   end
 
   def test_draw_2
     @sticks.expects(:draw_2).once
     @sticks.expects(:computer).once
-    @sticks.expects(:game_over?).returns(false)
+    @sticks.expects(:game_over?).returns(false).at_least_once
     @game.draw 2
   end
 
   def test_draw_3
     @sticks.expects(:draw_3).once
     @sticks.expects(:computer).once
-    @sticks.expects(:game_over?).returns(false)
+    @sticks.expects(:game_over?).returns(false).at_least_once
     @game.draw 3
   end
 
@@ -40,5 +40,14 @@ class TestGame < MiniTest::Test
     sticks.expects(:game_over?).returns(true)
     game = Game.new sticks
     assert_equal :computer, game.draw(1)
+  end
+
+  def test_draw_player_is_winner
+    sticks = mock()
+    sticks.expects(:draw_1).once
+    sticks.expects(:computer).once
+    sticks.expects(:game_over?).returns(false).then.returns(true).at_least_once
+    game = Game.new sticks
+    assert_equal :player, game.draw(1)
   end
 end
