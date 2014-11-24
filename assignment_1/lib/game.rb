@@ -3,7 +3,7 @@ class Game
     @sticks = sticks
   end
 
-  def draw_1
+  def draw n
     @sticks.draw_1
     @sticks.computer
   end
