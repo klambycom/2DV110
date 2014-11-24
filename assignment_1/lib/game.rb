@@ -4,7 +4,11 @@ class Game
   end
 
   def draw n
-    @sticks.draw_1
+    case n
+    when 1 then @sticks.draw_1
+    when 2 then @sticks.draw_2
+    end
+
     @sticks.computer
   end
 end
