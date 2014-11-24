@@ -1,9 +1,8 @@
+require 'test_helper'
 require './lib/game.rb'
 require './lib/sticks.rb'
-require 'test/unit'
-require 'mocha/test_unit'
 
-class TestGame < Test::Unit::TestCase
+class TestGame < MiniTest::Test
   def setup
     @game = Game.new(Sticks.new)
   end

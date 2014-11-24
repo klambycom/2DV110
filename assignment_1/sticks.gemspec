@@ -1,6 +1,6 @@
 # coding: utf-8
 
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('../lib/', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
@@ -13,11 +13,13 @@ Gem::Specification.new do |spec|
   spec.homepage       = ''
   spec.license        = 'MIT'
 
+  spec.add_development_dependency 'minitest'
+  spec.add_development_dependency 'guard-minitest'
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'mocha'
 
-  spec.files          = Dir['lib/*.rb']
-  spec.executables    = ['bin/sticks']
-  spec.test_files     = Dir.glob('tests/*.rb')
-  spec.require_paths  = ['lib']
+  spec.files          = Dir.glob('lib/*.rb')
+  spec.executables    = ['sticks']
+  spec.test_files     = Dir.glob('test/*.rb')
+  spec.require_paths  = 'lib'
 end

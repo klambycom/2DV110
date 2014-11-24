@@ -1,8 +1,7 @@
+require 'test_helper'
 require './lib/sticks.rb'
-require 'test/unit'
-require 'mocha/test_unit'
 
-class TestSticks < Test::Unit::TestCase
+class TestSticks < MiniTest::Test
   def setup
     @sticks = Sticks.new
   end
@@ -45,21 +44,21 @@ class TestSticks < Test::Unit::TestCase
 
   def test_draw_to_many_1
     draw 15
-    assert_raise RuntimeError do
+    assert_raises RuntimeError do
       @sticks.draw_1
     end
   end
 
   def test_draw_to_many_2
     draw 14
-    assert_raise RuntimeError do
+    assert_raises RuntimeError do
       @sticks.draw_2
     end
   end
 
   def test_draw_to_many_3
     draw 13
-    assert_raise RuntimeError do
+    assert_raises RuntimeError do
       @sticks.draw_3
     end
   end
