@@ -5,5 +5,6 @@ class Game
 
   def draw_1
     @sticks.draw_1
+    @sticks.computer
   end
 end
