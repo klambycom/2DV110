@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-24T23:00:09+01:00">2014-11-24T23:00:09+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-11-25T11:41:10+01:00">2014-11-25T11:41:10+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         14.64
+         15.98
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>38</b> relevant lines. 
-    <span class="green"><b>38</b> lines covered</span> and
+    <b>43</b> relevant lines. 
+    <span class="green"><b>43</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#144885d542548b386b3be94072db18ddfadd8edc" class="src_link" title="lib/game.rb">lib/game.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
-        <td>13</td>
-        <td>13</td>
+        <td>41</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>4.0</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>43.8</td>
+        <td>54.3</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>7.2</td>
+        <td>7.9</td>
       </tr>
       
     </tbody>
@@ -101,8 +101,8 @@
     <h3>lib/game.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>13</b> relevant lines. 
-      <span class="green"><b>13</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -122,8 +122,8 @@
           <code class="ruby">  def initialize sticks</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="3">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="18" data-linenumber="3">
+          <span class="hits">18</span>
           
           <code class="ruby">    @sticks = sticks</code>
         </li>
@@ -269,6 +269,90 @@
         <li class="never" data-hits="" data-linenumber="27">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def to_s</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="29">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    text = %{There is #{@sticks.nr_of_sticks} sticks left</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">#{@sticks.to_s}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">Select number of sticks (the player who draws the last stick looses)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">1. Draw 1 stick}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="36">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    text += &quot;\n2. Draw 2 sticks&quot; if @sticks.draw_2?</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="37">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    text += &quot;\n3. Draw 3 sticks&quot; if @sticks.draw_3?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="39">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    text</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -326,20 +410,20 @@
           <code class="ruby">      define_method(&quot;draw_#{i}&quot;) do</code>
         </li>
       
-        <li class="covered" data-hits="128" data-linenumber="7">
-          <span class="hits">128</span>
+        <li class="covered" data-hits="157" data-linenumber="7">
+          <span class="hits">157</span>
           
           <code class="ruby">        raise &#39;No sticks left&#39; if nr_of_sticks &lt; i</code>
         </li>
       
-        <li class="covered" data-hits="125" data-linenumber="8">
-          <span class="hits">125</span>
+        <li class="covered" data-hits="154" data-linenumber="8">
+          <span class="hits">154</span>
           
           <code class="ruby">        @nr_of_sticks -= i</code>
         </li>
       
-        <li class="covered" data-hits="125" data-linenumber="9">
-          <span class="hits">125</span>
+        <li class="covered" data-hits="154" data-linenumber="9">
+          <span class="hits">154</span>
           
           <code class="ruby">        @last_draw = i</code>
         </li>
@@ -356,8 +440,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="12">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="12">
+          <span class="hits">17</span>
           
           <code class="ruby">      define_method(&quot;draw_#{i}?&quot;) { nr_of_sticks &gt;= i }</code>
         </li>
@@ -446,14 +530,14 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="9">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="9">
+          <span class="hits">37</span>
           
           <code class="ruby">    @nr_of_sticks = 15</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="10">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="10">
+          <span class="hits">37</span>
           
           <code class="ruby">    @last_draw = 0</code>
         </li>
@@ -524,8 +608,8 @@
           <code class="ruby">  def to_s</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="22">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="10" data-linenumber="22">
+          <span class="hits">10</span>
           
           <code class="ruby">    (&#39;I&#39; * nr_of_sticks) + (&#39;.&#39; * @last_draw) + (&#39;_&#39; * ((15 - nr_of_sticks) - @last_draw))</code>
         </li>
