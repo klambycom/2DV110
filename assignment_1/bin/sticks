@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require 'colorize'
+require './lib/game.rb'
+require './lib/sticks.rb'
+
+game = Game.new(Sticks.new)
+winner = nil
+
+loop do
+  puts game.to_s
+  print "\nYour choice: "
+  choice = gets.chomp.to_i
+
+  begin
+    winner = game.draw choice
+  rescue
+    puts "Invalid input".red
+    winner = :none
+  end
+
+  puts "\n\n\n"
+
+  break unless winner == :none
+end
+
+puts "*** #{winner.capitalize} is the winner! ***".yellow.on_red
+puts "\n"

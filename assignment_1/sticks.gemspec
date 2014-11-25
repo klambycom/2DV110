@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage       = ''
   spec.license        = 'MIT'
 
+  spec.add_dependency 'colorize'
+
   spec.add_development_dependency 'minitest'
   spec.add_development_dependency 'guard-minitest'
   spec.add_development_dependency 'simplecov'

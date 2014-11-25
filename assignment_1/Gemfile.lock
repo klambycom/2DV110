@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     Sticks (1.0)
+      colorize
 
 GEM
   remote: https://rubygems.org/
@@ -9,6 +10,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
+    colorize (0.7.3)
     docile (1.1.5)
     ffi (1.9.6)
     formatador (0.2.5)
