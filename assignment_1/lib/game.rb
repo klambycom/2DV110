@@ -22,7 +22,7 @@ class Game
     return :player if @sticks.game_over?
 
     # No winner yet
-    return :none
+    :none
   end
 
   def to_s
