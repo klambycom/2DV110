@@ -31,9 +31,9 @@ class Game
 
 Select number of sticks (the player who draws the last stick looses)
 
-1. Draw 1 stick
-2. Draw 2 sticks}
+1. Draw 1 stick}
 
+    text += "\n2. Draw 2 sticks" if @sticks.draw_2?
     text += "\n3. Draw 3 sticks" if @sticks.draw_3?
 
     text
