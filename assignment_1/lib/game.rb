@@ -26,13 +26,16 @@ class Game
   end
 
   def to_s
-    return %{There is #{@sticks.nr_of_sticks} sticks left
+    text = %{There is #{@sticks.nr_of_sticks} sticks left
 #{@sticks.to_s}
 
 Select number of sticks (the player who draws the last stick looses)
 
 1. Draw 1 stick
-2. Draw 2 sticks
-3. Draw 3 sticks}
+2. Draw 2 sticks}
+
+    text += "\n3. Draw 3 sticks" if @sticks.draw_3?
+
+    text
   end
 end
