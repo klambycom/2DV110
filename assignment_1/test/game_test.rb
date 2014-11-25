@@ -94,4 +94,21 @@ Select number of sticks (the player who draws the last stick looses)
 
     assert_equal text, game.to_s
   end
+
+  def test_to_s_2_sticks_left
+    sticks = Sticks.new
+    game = Game.new sticks
+
+    (0...13).each { sticks.draw_1 }
+
+    text = %{There is 2 sticks left
+II.____________
+
+Select number of sticks (the player who draws the last stick looses)
+
+1. Draw 1 stick
+2. Draw 2 sticks}
+
+    assert_equal text, game.to_s
+  end
 end
